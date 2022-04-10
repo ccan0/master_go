@@ -20,7 +20,7 @@ class _SplashScreenViewState extends BaseState<SplashScreenView> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 3), () async {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+      Navigator.pushNamed(context, 'first_onboard');
     });
   }
 

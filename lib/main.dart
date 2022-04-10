@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:master_go/core/init/theme/app_theme.dart';
+import 'package:master_go/screens/onboards/first_onboard_screen/view/first_onboard_screen_view.dart';
 import 'package:master_go/screens/splash_screen/view/splash_screen_view.dart';
 
 void main() {
@@ -13,9 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.instance.theme,
-      home: const SplashScreenView(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.instance.theme,
+        home: const SplashScreenView(),
+        initialRoute: "/",
+        routes: {
+          // Onboard
+          'first_onboard': (context) => const FirstOnboardScreenView(),
+        });
   }
 }
